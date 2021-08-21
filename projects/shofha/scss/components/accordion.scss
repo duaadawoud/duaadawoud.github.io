@@ -1,0 +1,106 @@
+.card{
+    padding: 0 20px;
+    border-radius: 0;
+    border:0;
+    @include transition(margin,.4s);
+    &:not(:first-child){
+        margin: .5rem 0;
+    }
+    .collapsed{
+        .fa-minus{
+            &:before{
+                content: '\f067';
+            }
+        }
+    }
+    &-header{
+        padding: 0;
+        background-color: $secondBG;
+        .btn{
+            width: 100%;
+            padding: 15px;
+            height: auto;
+            text-align: $left;
+            position: relative;
+            color: $mainTextClr;
+            background-color: $secondBG;
+            &:after{
+                display: none;
+            }
+            &:hover{
+                box-shadow: none;
+                span{
+                    webkit-transform: none;
+                    -moz-transform: none;
+                    -ms-transform: none;
+                    -o-transform: none;
+                    transform: none;
+                }
+            }
+            span{
+                margin: 0;
+                display: inline-block;
+                color: #616161;
+                text-transform: capitalize;
+            }
+            i{
+                color: #616161;
+                font-size: 0.875rem;
+                margin-top: 5px;
+                position: absolute;
+                #{$right}: 10px;
+            }
+        }
+    }
+    &-body{
+        padding: 1.25rem;
+        color: $mainTextClr;
+        background-color: $secondBG;
+    }
+    //----my profile card open-----------
+    &.active-card{
+        margin: 20px -30px !important;
+        .card-header{
+            padding: 0 2.5rem;
+            .btn-link{
+                padding: 1.25rem 0;
+                font-size: 1.25rem;
+                border-bottom: 1px $grey solid;
+                @include border-radius(0);
+                span{
+                    color: $mainTextClr;
+                }
+
+            }
+        }
+        .card-body{
+            padding: 1.25rem 2.5rem 2.5rem;
+        }
+    }
+}
+
+
+@include mediaQuery(768){
+    .card{
+        &.active-card{
+            padding: 0 2rem;
+        }
+    }
+}
+@include mediaQuery(575){
+    .card{
+        padding: 0;
+        &.active-card{
+            padding: 0 1rem;
+            .card-header{
+                padding: 0 1.5rem;
+            }
+            .card-body{
+                padding:1.25rem 1.5rem;
+            }
+        }
+    }
+}
+@include mediaQuery(480){
+
+}

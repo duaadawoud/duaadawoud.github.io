@@ -1,0 +1,161 @@
+@mixin linkColor ($link, $visit, $hover, $active) {
+    a {
+        color: $link;
+        &:visited {
+            color: $visit;
+        }
+        &:hover {
+            color: $hover;
+        }
+        &:active {
+            color: $active;
+        }
+    }
+}
+@mixin text($family, $size, $lineHeight, $color) {
+    @if $family != null {
+        font-family: $family;
+    }
+    @if $size != null {
+        font-size: $size;
+    }
+    @if $lineHeight != null {
+        line-height: $lineHeight;
+    }
+    @if $color != null {
+        color: $color;
+    }
+}
+@mixin fontAwesome($family,$unicode,$size,$weight,$color){
+    @if $family != null {
+        font-family: $family;
+    }
+    @if $unicode != null {
+        content: $unicode;
+    }
+    @if $size != null {
+        font-size: $size;
+    }
+    @if $weight != null {
+        font-weight: $weight;
+    }
+    @if $color != null {
+        color: $color;
+    }
+}
+
+@mixin box($height){
+    &:before{
+        content: '';
+        display: block;
+        padding-top: $height;
+    }
+}
+
+@mixin boxFixed($width, $height:$width) {
+    width: $width;
+    height: $height;
+}
+
+@mixin boxRatio( $width, $ratio) {
+    width: $width;
+    height: $width * $ratio;
+}
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+
+@mixin translate($x, $y) {
+    -webkit-transform: translate( $x, $y);
+    -moz-transform: translate( $x, $y);
+    -ms-transform: translate( $x, $y);
+    -o-transform: translate( $x, $y);
+    transform: translate( $x, $y);
+}
+
+@mixin transition($property, $speed)  {
+    -webkit-transition: ($property) ($speed);
+    -moz-transition: ($property) ($speed);
+    -ms-transition: ($property) ($speed);
+    -o-transition: ($property) ($speed);
+    transition: ($property) ($speed);
+}
+@mixin delay($x){
+    -webkit-transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    -ms-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+@mixin rotate($deg) {
+    -webkit-transform: rotate($deg);
+    -moz-transform: rotate($deg);
+    -ms-transform: rotate($deg);
+    -o-transform: rotate($deg);
+    transform: rotate($deg);
+}
+@mixin scale($x, $y) {
+    -webkit-transform: scale( $x, $y);
+    -moz-transform: scale( $x, $y);
+    -ms-transform: scale( $x, $y);
+    -o-transform: scale( $x, $y);
+    transform: scale( $x, $y);
+}
+@mixin v-flex($align) {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: ($align);
+    -moz-box-align: ($align);
+    -ms-flex-align: ($align);
+    -webkit-align-items: ($align);
+    align-items: ($align);
+}
+
+@mixin truncate($truncation-boundary) {
+    max-width: $truncation-boundary;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@mixin input-placeholder {
+    &.placeholder { @content; }
+    &:-moz-placeholder { @content; }
+    &::-moz-placeholder { @content; }
+    &:-ms-input-placeholder { @content; }
+    &::-webkit-input-placeholder { @content; }
+}
+
+
+
+
+///////////////////////////////////////////////////////////////
+//Media Queries
+$breakpoints: (
+        320:  320px,       // phone-x-small
+        360:  360px,       // phone-small
+        400:  400px,       // phone
+        480:  480px,       // phone-wide
+        560:  560px,       // phablet
+        575:  574.98px,
+        640:  640px,       // tablet-small
+        768:  767.98px,    // tablet
+        992:  991.98px,
+        1024: 1024px,      // tablet-wide
+        1200: 1199.98px,   // desktop
+        1400: 1440px,      // desktop-wide
+        1600: 1600px       // desktop-extra-wide
+);
+@mixin mediaQuery($width, $type: max) {
+    @if map_has_key($breakpoints, $width) {
+        $width: map_get($breakpoints, $width);
+        @media only screen and (#{$type}-width: $width) {
+            @content;
+        }
+    }
+}

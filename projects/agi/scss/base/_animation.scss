@@ -1,0 +1,40 @@
+@-webkit-keyframes imageAnimation {
+	0% {
+		-webkit-transform: scale(1) ;
+		-webkit-animation-timing-function: ease-in;
+	}
+	8% {
+		-webkit-transform: scale(1.05);
+		-webkit-animation-timing-function: ease-out;
+	}
+	25% {
+		-webkit-transform: scale(1.1) ;
+	}
+	50% {
+		-webkit-transform: scale(1.2) rotate(3deg) ;
+	}
+	100% {
+		-webkit-transform: scale(1) ;
+		-webkit-animation-timing-function: ease-in;
+	}
+}
+@keyframes imageAnimation {
+	0% {
+		transform: scale(1);
+		animation-timing-function: ease-in;
+	}
+	8% {
+		transform: scale(1.05);
+		animation-timing-function: ease-out;
+	}
+	25% {
+		transform: scale(1.1);
+	}
+	50% {
+		transform: scale(1.2) rotate(3deg);
+	}
+	100% {
+		transform: scale(1);
+		animation-timing-function: ease-in;
+	}
+}

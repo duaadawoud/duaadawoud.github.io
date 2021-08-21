@@ -1,0 +1,71 @@
+button{
+    cursor: pointer;
+}
+.btn{
+    border-radius: .25rem;
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    @extend %btn-reset;
+    &.btn-hyperlink{
+        background-color: $buttonBG;
+        color: #fff;
+        @include transition(all,.4s);
+        &:hover{
+            background-color: $buttonBG;
+            color: #fff;
+        }
+    }
+    &-theme{
+        background-color: $buttonBG;
+    }
+    &.bordered, &-bordered{
+        background-color: transparent;
+        border: 1px #fff solid !important;
+        &:hover{
+            background-color: transparent;
+        }
+    }
+    &-text{
+        margin-top: 2rem;
+        padding: 0;
+        background-color: transparent;
+        color: $linkClr;
+        font-size: calculateRem(14px);
+        @extend %btn-reset
+    }
+    &:after{
+        background: #fff;
+        content: "";
+        height: 130px;
+        left: -75px;
+        opacity: .15;
+        position: absolute;
+        top: -50px;
+        transform: rotate(35deg);
+        transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+        width: 60px;
+    }
+    &:hover{
+        &:after {
+            left: 120%;
+            transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+        }
+    }
+    &:focus{
+        box-shadow: none;
+    }
+}
+
+
+@include mediaQuery(575){
+    .btn{
+        padding: .5rem .75rem;
+    }
+}
+@include mediaQuery(480) {
+    .btn{
+        font-size: calculateRem(14px);
+    }
+}

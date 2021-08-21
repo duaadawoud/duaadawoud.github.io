@@ -1,0 +1,23 @@
+*, *::after, *::before {
+  outline: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  direction: $isRtl;
+}
+
+body {
+  box-sizing: border-box;
+  position: relative;
+  min-height: 100vh;
+}
+
+a {
+  display: inline-block;
+  &:hover {
+    text-decoration: none;
+  }
+}
+ul,ol{
+  list-style-type: none;
+}

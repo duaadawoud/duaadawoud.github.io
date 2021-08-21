@@ -1,0 +1,28 @@
+// LTR fonts - EN
+@font-face {
+    font-family: 'bill-bold';
+    src: url('../fonts/ltr/Bill-Corporate-Narrow-Bold.otf');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'bill-med';
+    src: url('../fonts/ltr/Bill-Corporate-Narrow-Medium.otf');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'bill-reg';
+    src: url('../fonts/ltr/Bill-Corporate-Narrow-Book.otf');
+    font-style: normal;
+}
+////////////////////////////////////////////////////////////
+// RTL fonts - AR
+@font-face {
+    font-family: 'Bahij-reg';
+    src: url('../fonts/rtl/Bahij-Janna-Regular.ttf');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Bahij-bold';
+    src: url('../fonts/rtl/Bahij-Janna-Bold.ttf');
+    font-style: normal;
+}

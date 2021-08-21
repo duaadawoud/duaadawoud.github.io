@@ -1,0 +1,62 @@
+$isRtl: ltr;
+
+
+
+
+//directions -------
+$left: left;
+$right: right;
+$flex-direction:row;
+
+// icons -----
+$double-right: "\f101";
+$double-left: "\f100";
+$chevron-left:"\f053";
+$chevron-right:"\f054";
+
+
+//font family ------
+$regular: 'bill-reg';
+$bold: 'bill-bold';
+$med: 'bill-med';
+
+// font sizes ------
+$titleSize: calculateRem(30px);
+$introSize:calculateRem(20px);
+$normalSize: calculateRem(18px);
+$smallSize: calculateRem(16px);
+$tinySize: calculateRem(12px);
+
+
+
+
+/*------ lang Switcher ------*/
+@if $isRtl == rtl
+{
+    //directions -------
+    $left: right;
+    $right: left;
+    $flex-direction:row-reverse;
+
+    // icons -----
+    $double-right: "\f100";
+    $double-left: "\f101";
+    $chevron-left:"\f054";
+    $chevron-right:"\f053";
+
+    //font family ------
+    $regular: 'Bahij-reg';
+    $med: 'Bahij-reg';
+    $bold: 'Bahij-bold';
+
+    // font sizes ------
+    $titleSize: calculateRem(30px);
+    $introSize:calculateRem(20px);
+    $normalSize: calculateRem(18px);
+    $smallSize: calculateRem(14px);
+    $tinySize: calculateRem(10px);
+
+}
+
+
+

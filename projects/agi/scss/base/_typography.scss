@@ -1,0 +1,16 @@
+:root {
+    --n: 1.2rem;
+    --h: 1.6rem;
+    --l: 1.8rem;
+}
+a{
+    text-decoration: none;
+}
+body {
+    font-family: $regular;
+    color: $mainTextClr;
+    font-size: calculateRem(18px);
+}
+p{
+    margin-bottom: .75rem;
+}

@@ -1,0 +1,23 @@
+button{
+    cursor: pointer;
+    @extend %btn-reset;
+}
+.btn{
+    &-theme {
+        border-radius: .25rem;
+        color: #fff;
+        text-decoration: none;
+        background-color: $buttonBG;
+        transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,  box-shadow 0.15s ease-in-out;
+        @extend %btn-reset;
+    }
+    &-link{
+        color: #fff;
+        background-color:$linkClr;
+        @extend %btn-reset;
+    }
+    &-reset{
+        background-color: transparent;
+        margin-#{$left}:.75rem
+    }
+}

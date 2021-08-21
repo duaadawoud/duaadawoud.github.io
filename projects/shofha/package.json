@@ -1,0 +1,27 @@
+{
+  "name": "shofha-static",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile:style_ltr": "node-sass --output-style compressed --source-map true --source-map-contents true scss/main.scss css/style_ltr.css -w",
+    "compile:style_rtl": "node-sass --output-style compressed --source-map true --source-map-contents true scss/main.scss css/style_rtl.css -w",
+
+    "minifyJS": "uglifyjs js/customScripts.js --compress --mangle --warn --output assets/customScripts.min.js",
+    "minifyVP": "uglifyjs js/videoPlayer.js --compress --mangle --warn --output assets/videoPlayer.min.js",
+    "minifyOwl": "uglifyjs js/owlInit.js --compress --mangle --warn --output assets/owlInit.min.js"
+  },
+  "author": "Do3aa Dawoud",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^5.0.0",
+    "video.js": "^7.11.4"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.3",
+    "bootstrap": "^4.6.0",
+    "jquery": "^3.6.0",
+    "owl.carousel": "^2.3.4",
+    "uglify-js": "^3.13.6"
+  }
+}

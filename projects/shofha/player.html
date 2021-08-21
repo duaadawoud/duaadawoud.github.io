@@ -1,0 +1,177 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8"/>
+
+    <!-- IE compatipility Meta -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <!-- Resposive Meta-->
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+
+    <!--  Open Graph meta tags for facebook -->
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="">
+    <!--  Open Graph meta tags for twitter -->
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="">
+    <meta name="twitter:card" content="">
+
+    <!-- Keywords Meta-->
+    <meta name="keywords" content="">
+    <!-- description Meta-->
+    <meta name="description" content="">
+
+    <!--Author Meta-->
+    <meta name="author" content="Arpu Square">
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <title>Shofha</title>
+    <link rel="icon" href="images/Shofha-fav.png"/>
+
+
+<!-- MAIN-STYLE -->
+    <link href="css/style_ltr.css" rel="stylesheet" type="text/css"/>
+</head>
+
+<body>
+
+
+<main>
+    <section class="section player">
+        <div class="vid-caption">
+            <div>
+                <div id="showPlaylist" title="playlist">
+                    <img src="images/playlist.png" alt=""></div>
+                <span>Beast of Burden</span>
+            </div>
+            <div id="backBtn"><i class="fas fa-times"></i></div>
+        </div>
+        <figure>
+            <video id="videoPlayer" poster="media/maxresdefault.jpg" preload="auto">
+                <source label="1080" src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1080p.mp4" type=video/mp4>
+                <source  label="420" src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4" type=video/3gp>
+            </video>
+        </figure>
+        <div class="video-controls">
+            <div class="progress time">
+                <span class="current">00:00</span>
+                <div class="video-progress">
+                    <span class="buffer-bar"></span>
+                    <span class="time-bar"></span>
+                </div>
+                <span class="duration">00:00</span>
+            </div>
+            <div class="action-controls">
+                <div class="buttons start">
+                    <div class="play-button mini" title="Play/Pause Video"></div>
+                    <div class="play-pause">
+                        <button type="button" class="play"><i class="fas fa-play"></i></button>
+                        <button type="button" class="pause"><i class="fas fa-pause"></i></button>
+                    </div>
+
+                    <button type="button" class="backward" title="">
+                        <img src="images/10before.png" alt="">
+                    </button>
+                    <button type="button" class="forward" title="">
+                        <img src="images/10after.png" alt="">
+                    </button>
+                    <div class="sound-button sound-med" title="Mute/Unmute sound"></div>
+                    <div class="volume" title="Set volume">
+                        <span class="volume-bar"></span>
+                    </div>
+                </div>
+                <div class="buttons end">
+                    <button type="button" onclick="location.href='report.html'" class="" title="Report a problem">
+                        <i class="fas fa-exclamation-circle"></i>
+                    </button>
+                    <button type="button" class="prev" title="next episode">
+                        <i class="fas fa-step-backward"></i></button>
+                    <button type="button" class="next" title="next episode">
+                        <i class="fas fa-step-forward"></i></button>
+
+                    <div class="dropup speed">
+                        <div class=" dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="playback speed">
+                            <img src="images/speed.png">
+                            <div class="dropdown-menu">
+                                <button type="button" id="-5">0.5X</button>
+                                <button type="button" id="-75">0.75X</button>
+                                <button type="button" class="active" id="1x">1X</button>
+                                <button type="button" id="1-5">1.5X</button>
+                                <button type="button" id="1-75">1.75X</button>
+                                <button type="button" id="2x">2X</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dropup quality">
+                        <div class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Switch quality">
+                            <i class="fas fa-sliders-h"></i>
+                            <div class="dropdown-menu quality-list">
+                                <button type="button" class="" id="420"> 420 HD</button>
+                                <button type="button" class="active" id="1080"> 1080 HD</button>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btnFS" title="Switch to full screen">
+                        <i class="fas fa-expand"></i>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="playlist-wrapper">
+        <div class="playlist">
+            <a href="player.html" class="dropdown-item ">
+                <div class="thumb" style="background-image: url('media/2.jpg')"></div>
+                <div>
+                    <p>now available season 2 vampire</p>
+                    <small>1 day ago</small>
+                </div>
+            </a>
+            <a href="player.html" class="dropdown-item active">
+                <div class="thumb" style="background-image: url('media/2.jpg')"></div>
+                <div>
+                    <p>now available season 2 vampire</p>
+                    <small>1 day ago</small>
+                </div>
+            </a>
+            <a href="player.html" class="dropdown-item">
+                <div class="thumb" style="background-image: url('media/2.jpg')"></div>
+                <div>
+                    <p>now available season 2 vampire</p>
+                    <small>1 day ago</small>
+                </div>
+            </a>
+            <a href="player.html" class="dropdown-item">
+                <div class="thumb" style="background-image: url('media/2.jpg')"></div>
+                <div>
+                    <p>now available season 2 vampire</p>
+                    <small>1 day ago</small>
+                </div>
+            </a>
+        </div>
+    </div>
+</main>
+
+
+
+<!-- core scripts -->
+<script src="assets/jquery.min.js"></script>
+<script src="assets/bootstrap.bundle.min.js"></script>
+
+
+<!-- page scripts -->
+<script src="assets/videoPlayer.min.js"></script>
+
+
+</body>
+
+</html>

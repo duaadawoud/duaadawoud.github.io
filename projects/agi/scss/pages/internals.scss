@@ -1,0 +1,190 @@
+.brief{
+	text-align: center;
+	color: $subTitleClr;
+	font-size: calculateRem(20px);
+	&.aligned{
+		text-align: $left;
+	}
+}
+// ----------- about -------
+.testmonials-style2{
+	padding-bottom: 2rem;
+	@extend .testmonials;
+	background-color: $lightBG;
+	.owl-carousel {
+		&:before {
+			color: $mainClr;
+		}
+	}
+	.who{
+		background:linear-gradient(to top, $mainClr 50%,transparent 50%);
+		p{color:#fff}
+		span{color: $secondTextClr}
+	}
+}
+.values{
+	[class^='col']{
+		margin-top: 1.25rem;
+	}
+	font-size: $smallSize;
+}
+
+// ----------- partners -------
+.partner-block{
+	margin-top: 2rem;
+}
+
+// ----------- services -------
+.services-slider{
+	position: relative;
+	margin-bottom: calculateRem(40px);
+	.popup-content{
+		display: none;
+	}
+}
+.service-block{
+	text-align: center;
+	.sub-title{
+		margin-top: .75rem;
+	}
+	p{
+		height: calculateRem(150px);
+		line-height: 25px;
+		overflow: hidden;
+	}
+}
+.attribute{
+	display: flex;
+	align-items: baseline;
+	margin-bottom: .75rem;
+	i{
+		color: $iconClr;
+		margin-#{$right}:1rem;
+	}
+}
+
+// ----------- products -------
+.product-block{
+	display: flex;
+	align-items: flex-start;
+	color: $subTitleClr;
+	img{
+		margin-#{$right}:1rem
+	}
+	.category{
+		font-size:$smallSize;
+		margin-bottom: .75rem;
+		color: $mainTextClr;
+		text-transform: capitalize;
+		display: block;
+	}
+}
+
+// ----------- products details -------
+.carousel-screenshots{
+	width: 100%;
+	max-width: calculateRem(1000px);
+	margin: 0 auto calculateRem(80px);
+	.item{
+		padding: 0;
+	}
+	.owl-nav{
+		#{$right}:0;
+		top:100%
+	}
+}
+
+// ----------- news-------
+.news-block{
+	.image{
+		width: auto;
+		margin: -1.5rem -1rem 1rem;
+	}
+}
+.sec-details{
+	width: 80%;
+	margin: 0 auto;
+	img{
+		margin-bottom: 1.25rem;
+	}
+}
+
+// ----------- maps-------
+.map{
+	&outer{
+		height: calculateRem(360px);
+		*{
+			@extend %fullSize
+		}
+	}
+}
+.contact-info{
+	> div{
+		display: flex;
+		align-items: baseline;
+		margin-bottom: .75rem;
+		a{
+			display: block;
+			color: inherit;
+		}
+	}
+	i{
+		color: $iconClr;
+		margin-#{$right}:1rem
+	}
+}
+
+
+@include mediaQuery(1024) {
+	.testmonials-style2{
+		.who{
+			background-image: linear-gradient(to top, #00238E 60%, transparent 60%)
+		}
+	}
+}
+@include mediaQuery(992) {
+	.testmonials-style2{
+		.who{
+			background-image: linear-gradient(to top, #00238E 75%, transparent 75%);
+			margin-top: 1rem;
+			span{
+				font-size: 1rem;
+			}
+		}
+		.pic{
+			width: 6rem;
+			height: 6rem;
+			+div{
+				width: calc(100% - 9rem);
+			}
+		}
+	}
+}
+
+@include mediaQuery(768) {
+	.brief{
+		font-size: calculateRem(18px);
+	}
+	.testmonials-style2{
+		.owl-carousel{
+			&:before{
+				display: none;
+			}
+		}
+	}
+}
+@include mediaQuery(575){
+	.contact-info{
+		margin-top: 1.25rem;
+	}
+}
+@include mediaQuery(400){
+	.product-block{
+		flex-flow: column;
+	}
+	.services-slider{
+		.prev,.next{
+			display: none;
+		}
+	}
+}

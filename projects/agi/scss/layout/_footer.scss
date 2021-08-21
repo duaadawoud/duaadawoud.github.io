@@ -1,0 +1,31 @@
+footer{
+    width: 100%;
+    font-size: 1rem;
+    padding: 2rem 0;
+    color: $mainTitleClr;
+    text-align: center;
+    background-color: $lightBG;
+}
+.copyrights{
+    background-color: $mainClr;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+.social-media{
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    a {
+        color: $mainClr;
+        margin: 0 .5rem;
+        font-size: 2rem;
+    }
+}
+
+@include mediaQuery(992) {
+    .copyrights{
+        font-size: 14px;
+        padding: .75rem;
+    }
+}

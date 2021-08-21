@@ -1,0 +1,71 @@
+$isRtl: rtl;
+
+
+//directions -------
+$left: left;
+$right: right;
+$flex-direction:row;
+
+// icons -----
+$double-right: "\f101";
+$double-left: "\f100";
+$chevron-left:"\f053";
+$chevron-right:"\f054";
+$arrow-left:"\f060";
+$menu-left:"\f036";
+
+
+//font family ------
+$regular: 'en-Regular';
+$light:'en-light';
+$bold:'en-bold';
+$langFont:'ar-lang';
+
+// font sizes ------
+$titleSize: calculateRem(30px);
+$navSize:calculateRem(20px);
+$introSize:calculateRem(20px);
+$normalSize: calculateRem(18px);
+$smallSize: calculateRem(16px);
+$smallerSize: calculateRem(14px);
+$tinySize: calculateRem(12px);
+
+//  negative variable ------
+$x100: 100%;
+$x100minus: -100%;
+$x50minus: -50%;
+
+$negativeVal: 1;
+$formTransform: translate(calc(-50% - .75rem), 0);
+
+
+/*------ lang Switcher ------*/
+@if $isRtl == rtl
+{
+    //directions -------
+    $left: right;
+    $right: left;
+    $flex-direction:row-reverse;
+
+    // icons -----
+    $double-right: "\f100";
+    $double-left: "\f101";
+    $chevron-left:"\f054";
+    $chevron-right:"\f053";
+    $arrow-left:"\f061";
+    $menu-left:"\f038";
+
+    //font family ------
+    $regular: 'ar-Regular';
+    $light:'ar-light';
+    $bold:'ar-bold';
+    $langFont:'en-Regular';
+
+    //  negative variable ------
+    $x100: -100%;
+    $x100minus: 100%;
+    $x50minus: 50%;
+
+    $negativeVal: -1;
+    $formTransform: translate(calc(50% + .75rem), 0)
+}

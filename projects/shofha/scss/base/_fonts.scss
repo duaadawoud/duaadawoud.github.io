@@ -1,0 +1,40 @@
+// LTR fonts - EN
+@font-face {
+    font-family: 'en-light';
+    src: url('../fonts/en/OpenSans-Light.ttf');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'en-Regular';
+    src: url('../fonts/en/OpenSans-Regular.ttf');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'en-bold';
+    src: url('../fonts/en/OpenSans-Bold.ttf');
+    font-style: normal;
+}
+////////////////////////////////////////////////////////////
+// RTL fonts - AR
+@font-face {
+    font-family: 'ar-light';
+    src: url('../fonts/ar/ArbFONTS-Hacen-Saudi-Arabia.ttf');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ar-Regular';
+    src: url('../fonts/ar/ArbFONTS-Hacen-Saudi-Arabia.ttf');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ar-bold';
+    src: url('../fonts/ar/ArbFONTS-Hacen-Saudi-Arabia.ttf');
+    font-style: normal;
+    font-weight: 900;
+}
+@font-face {
+    font-family: 'ar-lang';
+    src: url('../fonts/ar/MarkaziText-VariableFont_wght.ttf');
+    font-style: normal;
+    font-weight: 900;
+}

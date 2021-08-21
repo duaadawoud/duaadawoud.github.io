@@ -1,0 +1,23 @@
+:root {
+    --h: 1.6rem;
+}
+body {
+    font-family: $regular;
+    font-size: $normalSize;
+}
+
+@media only screen and (max-height: 768px) {
+    body {
+        font-size: $smallSize;
+    }
+}
+@include mediaQuery(992){
+    body {
+        font-size: $smallSize;
+    }
+}
+@include mediaQuery(575){
+    body {
+        font-size: $smallerSize;
+    }
+}
